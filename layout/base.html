@@ -15,7 +15,7 @@
 {%endmacro%}
 
 {%macro md(text,math)%}
-{%if math or t_config.all_math%}text|markdown_math{%else%}text|markdown{%endif%}
+{%if math or t_config.all_math%}{{text|markdown_math}}{%else%}{{text|markdown}}{%endif%}
 {%endmacro%}
 
 {%macro mg(x,y)%}
